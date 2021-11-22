@@ -126,7 +126,7 @@ def main():
             mel_fmax=args.mel_fmax,
             betabinomial_online_dir=None,
             pitch_online_dir=None,
-            pitch_online_method=args.f0-method)
+            pitch_online_method=args.f0_method)
 
         data_loader = DataLoader(
             dataset,
