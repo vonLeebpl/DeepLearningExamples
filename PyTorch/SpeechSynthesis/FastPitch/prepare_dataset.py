@@ -72,7 +72,7 @@ def parse_args(parser):
                         help='Maximum mel frequency')
     parser.add_argument('--n-mel-channels', type=int, default=80)
     # Pitch extraction
-    parser.add_argument('--f0_method', default='pyin', type=str,
+    parser.add_argument('--f0-method', default='pyin', type=str,
                         choices=['pyin'], help='F0 estimation method')
     # Performance
     parser.add_argument('-b', '--batch-size', default=1, type=int)
@@ -126,7 +126,7 @@ def main():
             mel_fmax=args.mel_fmax,
             betabinomial_online_dir=None,
             pitch_online_dir=None,
-            pitch_online_method=args.f0_method)
+            pitch_online_method=args.f0-method)
 
         data_loader = DataLoader(
             dataset,
