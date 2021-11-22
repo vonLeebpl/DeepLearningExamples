@@ -11,8 +11,20 @@ from .cmudict import valid_symbols
 _arpabet = ['@' + s for s in valid_symbols]
 
 
-def get_symbols(symbol_set='english_basic'):
-    if symbol_set == 'english_basic':
+def get_symbols(symbol_set='polish_basic'):
+    if symbol_set == 'polish_basic':
+        _pad = '_'
+        _punctuation = '!\'(),.:;? '
+        _special = '-'
+        _letters = 'AĄBCĆDEĘFGHIJKLŁMNŃOÓPQRSŚTUVWXYZŹŻaąbcćdećfghijklmnńoópqrsśtuvwxyzźż'
+        symbols = list(_pad + _special + _punctuation + _letters) + _arpabet
+    elif symbol_set == 'polish_basic_lowercase':
+        _pad = '_'
+        _punctuation = '!\'(),.:;? '
+        _special = '-'
+        _letters = 'aąbcćdećfghijklmnńoópqrsśtuvwxyzźż'
+        symbols = list(_pad + _special + _punctuation + _letters) + _arpabet
+    elif symbol_set == 'english_basic':
         _pad = '_'
         _punctuation = '!\'(),.:;? '
         _special = '-'
@@ -37,8 +49,8 @@ def get_symbols(symbol_set='english_basic'):
     return symbols
 
 
-def get_pad_idx(symbol_set='english_basic'):
-    if symbol_set in {'english_basic', 'english_basic_lowercase'}:
+def get_pad_idx(symbol_set='polish_basic'):
+    if symbol_set in {'polish_basic','polish_basic_lowercase','english_basic', 'english_basic_lowercase'}:
         return 0
     else:
         raise Exception("{} symbol set not used yet".format(symbol_set))
