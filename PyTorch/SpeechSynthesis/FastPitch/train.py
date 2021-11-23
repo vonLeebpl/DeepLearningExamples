@@ -504,8 +504,7 @@ def main():
         epoch_iter = 0
         num_iters = len(train_loader) // args.grad_accumulation
 
-        print("Train loader len: {}".format(len(train_loader)))
-
+  
         for batch in train_loader:
 
             if accumulated_steps == 0:
