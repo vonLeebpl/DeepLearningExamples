@@ -16,13 +16,13 @@ def get_symbols(symbol_set='polish_basic'):
         _pad = '_'
         _punctuation = '!\'(),.:;? '
         _special = '-'
-        _letters = 'AĄBCĆDEĘFGHIJKLŁMNŃOÓPQRSŚTUVWXYZŹŻaąbcćdećfghijklmnńoópqrsśtuvwxyzźż'
+        _letters = 'AĄBCĆDEĘFGHIJKLŁMNŃOÓPQRSŚTUVWXYZŹŻaąbcćdeęfghijklłmnńoópqrsśtuvwxyzźż'
         symbols = list(_pad + _special + _punctuation + _letters) + _arpabet
     elif symbol_set == 'polish_basic_lowercase':
         _pad = '_'
         _punctuation = '!\'(),.:;? '
         _special = '-'
-        _letters = 'aąbcćdećfghijklmnńoópqrsśtuvwxyzźż'
+        _letters = 'aąbcćdeęfghijklłmnńoópqrsśtuvwxyzźż'
         symbols = list(_pad + _special + _punctuation + _letters) + _arpabet
     elif symbol_set == 'english_basic':
         _pad = '_'
