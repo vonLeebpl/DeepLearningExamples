@@ -482,6 +482,9 @@ def main():
     epoch_frames_per_sec = []
     epoch_time = []
 
+    print("Start epoch: {}".format(start_epoch))
+    print("Args epoch: {}".format(args.epochs))
+
     torch.cuda.synchronize()
     for epoch in range(start_epoch, args.epochs + 1):
         epoch_start_time = time.perf_counter()
